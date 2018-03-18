@@ -1,4 +1,4 @@
-# ProjectName: House Rent
+# ProjectName: House Rent - try it out http://houserent.apphb.com/
 
 # Roles: User, Admin and Not logged User
 
