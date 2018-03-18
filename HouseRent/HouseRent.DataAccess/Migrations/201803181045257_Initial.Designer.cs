@@ -13,7 +13,7 @@ namespace HouseRent.DataAccess.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201803172011246_Initial"; }
+            get { return "201803181045257_Initial"; }
         }
         
         string IMigrationMetadata.Source
