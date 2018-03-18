@@ -33,7 +33,7 @@
 
 # Not logged user charectaristics:
 - Can view Houses
-- Can see Cars Details
+- Can see Houses Details
 - Can see About Page
 - Can see Main Page
 - Can see Contact Page
