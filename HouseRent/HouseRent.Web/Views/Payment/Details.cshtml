@@ -1,0 +1,82 @@
+﻿@model HouseRent.RelationalServices.Domain.PaymentModel.Payment
+@using HouseRent.Web.Controllers
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 align="center" style="margin-top: 50px">Payment Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal" style="padding: 20px">
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfCard)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfCard)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecurityNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecurityNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CardType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CardExpiresOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardExpiresOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsMainPaymentMethod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsMainPaymentMethod)
+        </dd>
+
+    </dl>
+</div>
+<div style="margin: 0 0 275px 25px">
+    @if (AuthenticationController.IsLoggedAdmin)
+    {
+        @Html.ActionLink("Back to List", "Index")
+    }
+    else
+    {
+        @Html.ActionLink("Back to List", "ListCurrentUserPayments")
+        <span>|</span>
+        @Html.ActionLink("Edit", "Update", new { id = Model.Id })
+    }
+</div>

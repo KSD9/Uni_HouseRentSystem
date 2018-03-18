@@ -1,0 +1,81 @@
+﻿@using HouseRent.Web.Controllers
+@model HouseRent.RelationalServices.Domain.PaymentModel.Payment
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2 align="center" style="margin-top: 50px">Payment Create</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.NumberOfCard, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NumberOfCard, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NumberOfCard, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SecurityNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SecurityNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SecurityNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CardType, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.CardType, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CardType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CardExpiresOn, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CardExpiresOn, new { htmlAttributes = new { @class = "form-control", id = "datetimepicker" } })
+                @Html.ValidationMessageFor(model => model.CardExpiresOn, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IsMainPaymentMethod, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.IsMainPaymentMethod)
+                    @Html.ValidationMessageFor(model => model.IsMainPaymentMethod, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10" style="margin: 10px 0 100px 260px">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+@if (AuthenticationController.IsLoggedAdmin)
+{
+    <div style="margin: 10px 0 40px 5px">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+}
+else
+{
+    <div style="margin: 10px 0 40px 5px">
+        @Html.ActionLink("Back to List", "ListCurrentUserPayments")
+    </div>
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

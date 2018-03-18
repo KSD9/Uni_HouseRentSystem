@@ -1,0 +1,6 @@
+c:\users\ivo\source\repos\HouseRent.Web\HouseRent.Common\bin\Debug\HouseRent.Common.dll
+c:\users\ivo\source\repos\HouseRent.Web\HouseRent.Common\bin\Debug\HouseRent.Common.pdb
+c:\users\ivo\source\repos\HouseRent.Web\HouseRent.Common\obj\Debug\HouseRent.Common.csproj.CoreCompileInputs.cache
+c:\users\ivo\source\repos\HouseRent.Web\HouseRent.Common\obj\Debug\HouseRent.Common.dll
+c:\users\ivo\source\repos\HouseRent.Web\HouseRent.Common\obj\Debug\HouseRent.Common.pdb
+C:\Users\Ivo\source\repos\HouseRent.Web\HouseRent.Common\obj\Debug\HouseRent.Common.csprojResolveAssemblyReference.cache

@@ -1,0 +1,64 @@
+﻿@model HouseRent.RelationalServices.Domain.HouseModel.RentHouse
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 align="center" style="margin-top: 50px">Car Rent Delete</h2>
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal" style="padding: 20px">
+        <dt>
+            @Html.DisplayNameFor(model => model.House.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.House.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Note)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Note)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RentAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RentAddress)
+        </dd>
+       
+    </dl>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color" style="margin: 0 0 200px 25px">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

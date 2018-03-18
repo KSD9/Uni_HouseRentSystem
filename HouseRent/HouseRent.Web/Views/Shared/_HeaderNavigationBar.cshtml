@@ -1,0 +1,52 @@
+﻿@using HouseRent.Web.Controllers
+<div class="navbar navbar-inverse navbar-fixed-top" style="font-family: 'Montserrat', sans-serif;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("HouseRent", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Houses", "Index", "House")</li>
+                @if (AuthenticationController.IsLoggedAdmin)
+                {
+                    <li>@Html.ActionLink("All Payments", "Index", "Payment")</li>
+                    <li>@Html.ActionLink("All Users", "Index", "User")</li>
+                    <li>@Html.ActionLink("All HousesRents", "Index", "HouseRent")</li>
+                    <li>@Html.ActionLink("All Admins", "Index", "Admin")</li>
+                    <li>@Html.ActionLink("Profile", "Profile", "Admin")</li>
+                }
+                else if (AuthenticationController.logged != null)
+                {
+                    <li>@Html.ActionLink("Payment", "ListCurrentUserPayments", "Payment")</li>
+                    <li>@Html.ActionLink("Profile", "UserDetails", "User")</li>
+                    <li>@Html.ActionLink("House Rents", "ListCurrentUserHouseRents", "HouseRent")</li>
+                }
+                <li>@Html.ActionLink("News", "News", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contacts", "Contact", "Home")</li>
+            </ul>
+            <!-- Right align navbar in the navbar -->
+            <ul class="nav navbar-nav navbar-right">
+                @if (Session["LogInData"] != null)
+                {
+                    <li>@Html.ActionLink("Log Out", "LogOut", "Authentication")</li>
+                    <li>
+                        <span class="navbar-text">Hello, @Session["LogInData"]</span>
+                    </li>
+                }
+                else
+                {
+                    <li>@Html.ActionLink("Log In", "UserLogIn", "Authentication")</li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

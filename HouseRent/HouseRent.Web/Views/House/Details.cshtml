@@ -1,0 +1,94 @@
+﻿@using HouseRent.Web.Controllers
+@model  HouseRent.RelationalServices.Domain.HouseModel.House
+@{
+                /**/
+
+                ViewBag.Title = "Details";
+}
+<h2 align="center" style="margin-top: 50px">House Details</h2>
+<div class="row">
+    <hr />
+    <div class="col-md-6">
+        <img style="width:80%" src="@Model.ImgURL" alt="Image could not be found" />
+    </div>
+    <div class="col-md-6">
+        <dl class="dl-horizontal" style="padding: 20px">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Location)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Location)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt>
+                Image
+            </dt>
+            <dd>
+                <img style="width:65%" src="@Model.ImgURL" alt="Image could not be found" />
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.NumberOfRooms)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.NumberOfRooms)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PriceOfHouse)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PriceOfHouse)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PriceOfRentPerDay)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PriceOfRentPerDay)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.GuestsCapacity)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.GuestsCapacity)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.NumberOfFloors)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.NumberOfFloors)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.HouseType)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.HouseType)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Amount)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Amount)
+            </dd>
+        
+            <dt></dt>
+            <dd style="margin-top: 30px">
+                @if (AuthenticationController.IsLoggedAdmin)
+                {
+                    @Html.ActionLink("Edit", "Update", new { id = Model.Id })
+                    <span>|</span>
+                }
+                @Html.ActionLink("Back to List", "Index")
+            </dd>
+        </dl>
+    </div>
+</div>

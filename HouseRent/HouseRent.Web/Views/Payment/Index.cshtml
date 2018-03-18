@@ -1,0 +1,75 @@
+﻿@using HouseRent.Web.Controllers
+@model IEnumerable<HouseRent.RelationalServices.Domain.PaymentModel.Payment>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 align="center" style="margin-top: 50px">All Payments</h2>
+
+<p style="margin-top: 70px">
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" style="margin: 0px 0 280px 0">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.User.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfCard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SecurityNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CardType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CardExpiresOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsMainPaymentMethod)
+            </th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfCard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecurityNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CardType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CardExpiresOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsMainPaymentMethod)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Update", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

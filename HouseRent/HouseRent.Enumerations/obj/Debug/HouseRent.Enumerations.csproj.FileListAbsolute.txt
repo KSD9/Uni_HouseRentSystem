@@ -1,0 +1,5 @@
+c:\users\ivo\source\repos\HouseRent.Web\HouseRent.Enumerations\bin\Debug\HouseRent.Enumerations.dll
+c:\users\ivo\source\repos\HouseRent.Web\HouseRent.Enumerations\bin\Debug\HouseRent.Enumerations.pdb
+c:\users\ivo\source\repos\HouseRent.Web\HouseRent.Enumerations\obj\Debug\HouseRent.Enumerations.csproj.CoreCompileInputs.cache
+c:\users\ivo\source\repos\HouseRent.Web\HouseRent.Enumerations\obj\Debug\HouseRent.Enumerations.dll
+c:\users\ivo\source\repos\HouseRent.Web\HouseRent.Enumerations\obj\Debug\HouseRent.Enumerations.pdb

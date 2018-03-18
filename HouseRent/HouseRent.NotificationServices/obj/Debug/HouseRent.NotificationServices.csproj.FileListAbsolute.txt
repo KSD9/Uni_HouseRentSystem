@@ -1,0 +1,6 @@
+c:\users\ivo\source\repos\HouseRent.Web\HouseRent.NotificationServices\bin\Debug\HouseRent.NotificationServices.dll
+c:\users\ivo\source\repos\HouseRent.Web\HouseRent.NotificationServices\bin\Debug\HouseRent.NotificationServices.pdb
+c:\users\ivo\source\repos\HouseRent.Web\HouseRent.NotificationServices\obj\Debug\HouseRent.NotificationServices.csproj.CoreCompileInputs.cache
+c:\users\ivo\source\repos\HouseRent.Web\HouseRent.NotificationServices\obj\Debug\HouseRent.NotificationServices.dll
+c:\users\ivo\source\repos\HouseRent.Web\HouseRent.NotificationServices\obj\Debug\HouseRent.NotificationServices.pdb
+C:\Users\Ivo\source\repos\HouseRent.Web\HouseRent.NotificationServices\obj\Debug\HouseRent.NotificationServices.csprojResolveAssemblyReference.cache

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - House Rent</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <style>
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        p, span, blockquote {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        p {
+            line-height: 23px;
+        }
+    </style>
+</head>
+<body style="padding-bottom: 0;">
+    @{
+        Html.RenderPartial("_HeaderNavigationBar");
+    }
+    <div class="container-fluid body-content" style="padding-left: 0; padding-right: 0">
+        <span class="text-info" style="margin-top:15px">@TempData["Information"]</span>
+        @RenderBody()
+        <footer align="center" style="padding: 30px 0; background-color: #595959; color: #ffffff">
+            <p>&copy; HouseRent - New House Renting Service </p>
+        </footer>
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/moment.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+    <script>
+        $(function () {
+            $("#datetimepicker").datetimepicker({
+                format: 'DD/MMM/YYYY'
+            });
+
+            $("#StartDate").datetimepicker({
+                format: 'DD/MMM/YYYY'
+            });
+
+            $("#EndDate").datetimepicker({
+                format: 'DD/MMM/YYYY'
+            });
+        });
+    </script>
+</body>
+</html>

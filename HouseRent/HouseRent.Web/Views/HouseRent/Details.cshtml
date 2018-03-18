@@ -1,0 +1,81 @@
+﻿@using HouseRent.Web.Controllers
+@model HouseRent.RelationalServices.Domain.HouseModel.RentHouse
+@{
+    ViewBag.Title = "Details";
+}
+<h2 align="center" style="margin-top: 50px">House Rent Details</h2>
+<div class="row">
+    <hr />
+    <div class="col-md-6">
+        <img style="width:80%" src="@Model.House.ImgURL" alt="Image could not be found" />
+    </div>
+    <div class="col-md-6">
+        <dl class="dl-horizontal" style="padding: 20px">
+            <dt>
+                @Html.DisplayNameFor(model => model.House.Name)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.House.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.User.Username)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.User.Username)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Note)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Note)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.StartDate.Date)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.EndDate.Date)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TotalPrice)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TotalPrice)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.RentAddress)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.RentAddress)
+            </dd>
+
+            <dt></dt>
+            <dd style="margin-top: 30px">
+                @if (AuthenticationController.IsLoggedAdmin)
+                {
+                    <p>
+                        @Html.ActionLink("Edit", "Update", new { id = Model.Id }) |
+                        @Html.ActionLink("Back to List", "Index")
+                    </p>
+                }
+                @if (AuthenticationController.logged != null && AuthenticationController.IsLoggedAdmin == false)
+                {
+                    <p>
+                        @Html.ActionLink("Back to List", "ListCurrentUserHouseRents")
+                    </p>
+                }
+            </dd>
+        </dl>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+﻿@model HouseRent.RelationalServices.Domain.UserModel.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 align="center" style="margin-top: 50px">User Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal" style="padding: 20px">
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AdditionalInformation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdditionalInformation)
+        </dd>
+
+    </dl>
+</div>
+<div style="margin: 0 0 275px 25px">
+    @Html.ActionLink("Back to List", "Index")
+</div>
